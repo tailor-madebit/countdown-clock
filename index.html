@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Creepster' rel='stylesheet'>
+  <title>Purge Day Countdown</title>
+</head>
+<body>
+  <div class="container">
+    <h1>PURGE DAY</h1>
+      <h2>All that junk food you ate gotta go one way <span class="red">or another</span>  </h2>
+      <p class="danger">You should have listened to your body but you didn't. <p class="red"> Now prepare!!! <br> for the Purge is at hand muaaaaaaaaaaah</p></p>
+
+
+      <div class="cdown">
+        <div class="countdown red">
+          <span id="days">00</span>
+          Days
+        </div>
+
+        <div class="countdown red">
+          <span id="hours">00</span>
+          Hours
+        </div>
+        
+        <div class="countdown red">
+          <span id="minutes">00</span>
+          Minutes
+        </div>
+        
+        <div class="countdown red">
+          <span id="seconds">00</span>
+          Seconds
+        </div>
+        
+      </div>
+  </div>
+
+
+
+
+  <script type="text/javascript">
+    var count = new Date("sept 30, 2020 20:00:00").getTime();
+
+   var set = setInterval (function() {
+  var now = new Date().getTime();
+  var time = count - now;
+
+var days = Math.floor(time/(1000*60*60*24));
+
+var hours = Math.floor((time%(1000*60*60*24))/(1000*60*60));
+
+var minutes = Math.floor((time%(100*60*60))/(1000*60));
+
+var seconds = Math.floor((time%(1000*60))/1000);
+
+document.getElementById("days").innerHTML = days;
+
+document.getElementById("hours").innerHTML = hours;
+
+document.getElementById("minutes").innerHTML = minutes;
+
+document.getElementById("seconds").innerHTML = seconds;
+
+}, 1000) ;
+
+  </script>
+</body>
+</html>
